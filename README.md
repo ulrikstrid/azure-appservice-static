@@ -20,3 +20,7 @@ scripts": {
   "eject": "react-scripts eject"
 }
 ```
+
+## Special thanks
+
+[The web.config is taken from this blogpost](https://medium.com/@to_pe/deploying-create-react-app-on-microsoft-azure-c0f6686a4321#.kvehlxn7k)
