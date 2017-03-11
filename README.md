@@ -21,6 +21,10 @@ scripts": {
 }
 ```
 
+## Blog post
+
+https://medium.com/@strid/host-create-react-app-on-azure-986bc40d5bf2#.pycfnafbg
+
 ## Special thanks
 
 [The web.config is taken from this blogpost](https://medium.com/@to_pe/deploying-create-react-app-on-microsoft-azure-c0f6686a4321#.kvehlxn7k)
