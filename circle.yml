@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/azure-appservice-static
+
+    docker:
+      - image: node:6.10.0
+
+    steps:
+      - add-ssh-keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
+
+      - checkout
+
+      - run:
+          name: Pre-Dependencies
+          command: mkdir -p ~/azure-appservice-static/coverage
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: NPM Test
+          command: npm test -- --coverage
+          
+      - store_artifacts:
+          path: ~/azure-appservice-static/coverage
+          destination: coverage
+
+      # Deploy production
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./scripts/publish.sh production;
+            fi
