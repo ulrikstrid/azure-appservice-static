@@ -6,7 +6,7 @@ Deploy static create-react-app site to azure AppService.
 Copy the following files to your repo root
 ```
 .deployment
-deploy.sh
+scripts/deploy.sh
 web.config
 ```
 
